@@ -1,6 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { ChainId, Token } from '@uniswap/sdk-core';
 import { Pair } from '@uniswap/v2-sdk';
+import { Pair as CustomPair, FACTORY_ADDRESS_MAP, INIT_CODE_HASH } from '@miljan9602/v2-sdk'
 import retry, { Options as RetryOptions } from 'async-retry';
 import _ from 'lodash';
 
@@ -229,7 +230,7 @@ export class V2PoolProvider implements IV2PoolProvider {
 
     const poolStrs = _.map(Object.values(poolAddressToPool), poolToString);
 
-    log.debug({ poolStrs }, `Found ${poolStrs.length} valid pools`);
+    log.debug({ poolStrs }, `PROVIDER V2 Found ${poolStrs.length} valid pools`);
 
     return {
       getPool: (tokenA: Token, tokenB: Token): Pair | undefined => {
@@ -258,7 +259,7 @@ export class V2PoolProvider implements IV2PoolProvider {
       return { poolAddress: cachedAddress, token0, token1 };
     }
 
-    const poolAddress = Pair.getAddress(token0, token1);
+    const poolAddress = CustomPair.getAddress(token0, token1);
 
     this.POOL_ADDRESS_CACHE[cacheKey] = poolAddress;
 

@@ -37,7 +37,7 @@ import {
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
   USDC_SEPOLIA,
-  USDT_ARBITRUM,
+  USDT_ARBITRUM, USDT_AVAX,
   USDT_BNB,
   USDT_MAINNET,
   USDT_OPTIMISM,
@@ -48,7 +48,7 @@ import {
   WBTC_OPTIMISM,
   WBTC_OPTIMISM_GOERLI,
   WMATIC_POLYGON,
-  WMATIC_POLYGON_MUMBAI,
+  WMATIC_POLYGON_MUMBAI
 } from './token-provider';
 
 // These tokens will added to the Token cache on initialization.
@@ -136,6 +136,7 @@ export const CACHE_SEED_TOKENS: {
     WBNB: WRAPPED_NATIVE_CURRENCY[ChainId.BNB],
   },
   [ChainId.AVALANCHE]: {
+    USDT: USDT_AVAX,
     USDC: USDC_AVAX,
     DAI: DAI_AVAX,
     WAVAX: WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE],

@@ -36,11 +36,12 @@ type RawV2SubgraphPool = {
 };
 
 const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
-  [ChainId.MAINNET]:
-    'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v2-dev',
+  [ChainId.MAINNET]: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v2-dev',
+  [ChainId.AVALANCHE] : 'https://api.thegraph.com/subgraphs/name/miljan9602/uniswap-v2-test'
 };
 
-const threshold = 0.025;
+// TODO: Configure this threshold.
+const threshold = 0.000000000025;
 
 const PAGE_SIZE = 1000; // 1k is max possible query size from subgraph.
 
@@ -195,14 +196,9 @@ export class V2SubgraphProvider implements IV2SubgraphProvider {
     // https://github.com/Uniswap/v2-subgraph/blob/7c82235cad7aee4cfce8ea82f0030af3d224833e/src/mappings/pricing.ts#L43
     // Which helps filter pools with manipulated prices/liquidity.
 
-    // TODO: Remove. Temporary fix to ensure tokens without trackedReserveETH are in the list.
-    const FEI = '0x956f47f50a910163d8bf957cf5846d573e7f87ca';
-
     const poolsSanitized: V2SubgraphPool[] = pools
       .filter((pool) => {
         return (
-          pool.token0.id == FEI ||
-          pool.token1.id == FEI ||
           parseFloat(pool.trackedReserveETH) > threshold
         );
       })

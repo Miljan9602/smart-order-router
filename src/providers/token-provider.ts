@@ -454,6 +454,15 @@ export const DAI_AVAX = new Token(
   'DAI.e Token'
 );
 
+export const USDT_AVAX = new Token(
+  ChainId.AVALANCHE,
+  '0xc7198437980c041c805a1edcba50c1ce5db95118',
+  6,
+  'USDT',
+  'USDT Token'
+);
+
+
 export const USDC_AVAX = new Token(
   ChainId.AVALANCHE,
   '0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E',

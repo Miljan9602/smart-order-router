@@ -44,7 +44,7 @@ import {
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
   USDC_SEPOLIA,
-  USDT_ARBITRUM,
+  USDT_ARBITRUM, USDT_AVAX,
   USDT_BNB,
   USDT_GOERLI,
   USDT_MAINNET,
@@ -60,7 +60,7 @@ import {
   WETH_POLYGON,
   WMATIC_POLYGON,
   WMATIC_POLYGON_MUMBAI,
-  WXDAI_GNOSIS,
+  WXDAI_GNOSIS
 } from '../token-provider';
 
 import { IV3PoolProvider } from './pool-provider';
@@ -143,6 +143,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ],
   [ChainId.AVALANCHE]: [
     WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE],
+    USDT_AVAX,
     USDC_AVAX,
     DAI_AVAX,
   ],

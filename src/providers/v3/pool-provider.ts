@@ -190,7 +190,7 @@ export class V3PoolProvider implements IV3PoolProvider {
 
     const poolStrs = _.map(Object.values(poolAddressToPool), poolToString);
 
-    log.debug({ poolStrs }, `Found ${poolStrs.length} valid pools`);
+    log.debug({ poolStrs }, `PROVIDER V3 Found ${poolStrs.length} valid pools`);
 
     return {
       getPool: (

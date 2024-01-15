@@ -10,6 +10,7 @@ import bunyan, { default as Logger } from 'bunyan';
 import bunyanDebugStream from 'bunyan-debug-stream';
 import _ from 'lodash';
 import NodeCache from 'node-cache';
+import {V2SubgraphProvider} from '../src';
 
 import {
   AlphaRouter,
@@ -104,7 +105,7 @@ export abstract class BaseCommand extends Command {
     chainId: flags.integer({
       char: 'c',
       required: false,
-      default: ChainId.MAINNET,
+      default: ChainId.AVALANCHE,
       options: CHAIN_IDS_LIST,
     }),
     tokenListURI: flags.string({
@@ -332,6 +333,7 @@ export abstract class BaseCommand extends Command {
         provider,
         chainId,
         multicall2Provider: multicall2Provider,
+        v2SubgraphProvider: new V2SubgraphProvider(chainId),
         gasPriceProvider: new CachingGasStationProvider(
           chainId,
           new OnChainGasPriceProvider(

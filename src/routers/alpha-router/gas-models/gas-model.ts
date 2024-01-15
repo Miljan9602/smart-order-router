@@ -12,7 +12,6 @@ import {
   CUSD_CELO,
   CUSD_CELO_ALFAJORES,
   DAI_ARBITRUM,
-  DAI_AVAX,
   DAI_BNB,
   DAI_GOERLI,
   DAI_MAINNET,
@@ -33,13 +32,13 @@ import {
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
   USDC_SEPOLIA,
-  USDT_ARBITRUM,
+  USDT_ARBITRUM, USDT_AVAX,
   USDT_BNB,
   USDT_GOERLI,
   USDT_MAINNET,
   USDT_OPTIMISM,
   USDT_OPTIMISM_GOERLI,
-  WBTC_GOERLI,
+  WBTC_GOERLI
 } from '../../../providers/token-provider';
 import { IV2PoolProvider } from '../../../providers/v2/pool-provider';
 import {
@@ -78,7 +77,7 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.GNOSIS]: [USDC_ETHEREUM_GNOSIS],
   [ChainId.MOONBEAM]: [USDC_MOONBEAM],
   [ChainId.BNB]: [USDT_BNB, USDC_BNB, DAI_BNB],
-  [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
+  [ChainId.AVALANCHE]: [USDT_AVAX, USDC_AVAX],
   [ChainId.BASE]: [USDC_BASE],
 };
 
