@@ -1022,6 +1022,7 @@ export class AlphaRouter
   ): Promise<SwapRoute | null> {
     const originalAmount = amount;
     if (tradeType === TradeType.EXACT_OUTPUT) {
+
       const portionAmount = this.portionProvider.getPortionAmount(
         amount,
         tradeType,

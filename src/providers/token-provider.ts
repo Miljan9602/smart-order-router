@@ -767,6 +767,8 @@ export const USDT_ON = (chainId: ChainId): Token => {
       return USDT_ARBITRUM;
     case ChainId.BNB:
       return USDT_BNB;
+    case ChainId.AVALANCHE:
+      return USDT_AVAX;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

@@ -77,6 +77,7 @@ export class V2HeuristicGasModelFactory extends IV2GasModelFactory {
 
     let ethPool: Pair | null = null;
     if (!token.equals(WRAPPED_NATIVE_CURRENCY[chainId]!)) {
+
       ethPool = await this.getEthPool(
         chainId,
         token,

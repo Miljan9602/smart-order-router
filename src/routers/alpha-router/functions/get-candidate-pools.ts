@@ -29,6 +29,7 @@ import {
   USDC_ARBITRUM,
   USDC_ARBITRUM_GOERLI,
   USDC_AVAX,
+  USDT_AVAX,
   USDC_BASE,
   USDC_BNB,
   USDC_ETHEREUM_GNOSIS,
@@ -171,7 +172,7 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
     WGLMR_MOONBEAM,
   ],
   [ChainId.BNB]: [DAI_BNB, USDC_BNB, USDT_BNB],
-  [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
+  [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX, USDT_AVAX],
   [ChainId.BASE]: [USDC_BASE],
 };
 
