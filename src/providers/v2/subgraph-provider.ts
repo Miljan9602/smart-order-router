@@ -40,8 +40,8 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
   [ChainId.AVALANCHE] : 'https://api.thegraph.com/subgraphs/name/miljan9602/uniswap-v2-test'
 };
 
-// TODO: Configure this threshold.
-const threshold = 0.000000000025;
+// Miljan TODO: Configure this threshold.
+// const threshold = 0.000000000025;
 
 const PAGE_SIZE = 1000; // 1k is max possible query size from subgraph.
 
@@ -197,11 +197,11 @@ export class V2SubgraphProvider implements IV2SubgraphProvider {
     // Which helps filter pools with manipulated prices/liquidity.
 
     const poolsSanitized: V2SubgraphPool[] = pools
-      .filter((pool) => {
-        return (
-          parseFloat(pool.trackedReserveETH) > threshold
-        );
-      })
+      // .filter((pool) => {
+      //   return (
+      //     parseFloat(pool.trackedReserveETH) > threshold
+      //   );
+      // })
       .map((pool) => {
         return {
           ...pool,

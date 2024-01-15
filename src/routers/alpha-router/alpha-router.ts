@@ -1726,6 +1726,7 @@ export class AlphaRouter
 
     const beforeGetCandidates = Date.now();
 
+
     let v3CandidatePoolsPromise: Promise<V3CandidatePools | undefined> =
       Promise.resolve(undefined);
     if (
