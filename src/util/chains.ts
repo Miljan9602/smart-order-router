@@ -315,11 +315,11 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
     'Wrapped Ether'
   ),
   [ChainId.OPTIMISM_SEPOLIA]: new Token(
-    1,
-    'add',
+    ChainId.OPTIMISM_SEPOLIA,
+    '0x4200000000000000000000000000000000000006',
     18,
-    'add',
-    'add'
+    'WETH',
+    'Wrapped Ether'
   ),
   [ChainId.OPTIMISM_GOERLI]: new Token(
     ChainId.OPTIMISM_GOERLI,
@@ -344,10 +344,10 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
   ),
   [ChainId.ARBITRUM_SEPOLIA]: new Token(
     ChainId.ARBITRUM_SEPOLIA,
-    'TEST',
+    '0x4200000000000000000000000000000000000006',
     18,
-    'test',
-    'test'
+    'WETH',
+    'Wrapped Ether'
   ),
   [ChainId.POLYGON]: new Token(
     ChainId.POLYGON,
