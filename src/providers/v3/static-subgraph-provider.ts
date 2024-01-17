@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { ChainId, Token } from '@uniswap/sdk-core';
-import { FeeAmount, Pool } from '@uniswap/v3-sdk';
+import { ChainId, Token } from '@miljan9602/sdk-core';
+import { FeeAmount, Pool } from '@miljan9602/v3-sdk';
 import JSBI from 'jsbi';
 import _ from 'lodash';
 
@@ -106,6 +106,8 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     WRAPPED_NATIVE_CURRENCY[ChainId.ARBITRUM_GOERLI]!,
     USDC_ARBITRUM_GOERLI,
   ],
+  [ChainId.OPTIMISM_SEPOLIA]: [],
+  [ChainId.ARBITRUM_SEPOLIA]: [],
   [ChainId.OPTIMISM_GOERLI]: [
     WRAPPED_NATIVE_CURRENCY[ChainId.OPTIMISM_GOERLI]!,
     USDC_OPTIMISM_GOERLI,

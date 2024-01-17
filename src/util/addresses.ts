@@ -1,5 +1,5 @@
-import { CHAIN_TO_ADDRESSES_MAP, ChainId, Token } from '@uniswap/sdk-core';
-import { FACTORY_ADDRESS } from '@uniswap/v3-sdk';
+import { CHAIN_TO_ADDRESSES_MAP, ChainId, Token } from '@miljan9602/sdk-core';
+import { FACTORY_ADDRESS } from '@miljan9602/v3-sdk';
 
 import { NETWORKS_WITH_SAME_UNISWAP_ADDRESSES } from './chains';
 
@@ -120,7 +120,8 @@ export const WETH9: {
     | ChainId.GNOSIS
     | ChainId.MOONBEAM
     | ChainId.BNB
-    | ChainId.AVALANCHE
+    | ChainId.ARBITRUM_SEPOLIA
+    | ChainId.OPTIMISM_SEPOLIA
   >]: Token;
 } = {
   [ChainId.MAINNET]: new Token(
@@ -133,6 +134,13 @@ export const WETH9: {
   [ChainId.GOERLI]: new Token(
     ChainId.GOERLI,
     '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.AVALANCHE]: new Token(
+    ChainId.AVALANCHE,
+    '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7',
     18,
     'WETH',
     'Wrapped Ether'

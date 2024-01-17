@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { TradeType } from '@uniswap/sdk-core';
+import { TradeType } from '@miljan9602/sdk-core';
 import {
   InsufficientInputAmountError,
   InsufficientReservesError,

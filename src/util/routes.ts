@@ -1,7 +1,7 @@
-import { Protocol } from '@uniswap/router-sdk';
-import { Percent } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
-import { Pool } from '@uniswap/v3-sdk';
+import { Protocol } from '@miljan9602/router-sdk';
+import { Percent } from '@miljan9602/sdk-core';
+import { Pair } from '@miljan9602/v2-sdk';
+import { Pool } from '@miljan9602/v3-sdk';
 import _ from 'lodash';
 
 import { RouteWithValidQuote } from '../routers/alpha-router';

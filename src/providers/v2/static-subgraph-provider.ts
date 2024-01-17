@@ -1,5 +1,5 @@
-import { ChainId, Token } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
+import { ChainId, Token } from '@miljan9602/sdk-core';
+import { Pair } from '@miljan9602/v2-sdk';
 import _ from 'lodash';
 
 import { WRAPPED_NATIVE_CURRENCY } from '../../util/chains';
@@ -31,6 +31,8 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.OPTIMISM]: [],
   [ChainId.ARBITRUM_ONE]: [],
   [ChainId.ARBITRUM_GOERLI]: [],
+  [ChainId.ARBITRUM_SEPOLIA]: [],
+  [ChainId.OPTIMISM_SEPOLIA]: [],
   [ChainId.OPTIMISM_GOERLI]: [],
   [ChainId.POLYGON]: [],
   [ChainId.POLYGON_MUMBAI]: [],

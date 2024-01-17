@@ -3,14 +3,14 @@ import {
   Protocol,
   SwapRouter as SwapRouter02,
   Trade,
-} from '@uniswap/router-sdk';
-import { ChainId, Currency, TradeType } from '@uniswap/sdk-core';
+} from '@miljan9602/router-sdk';
+import { Route as V2RouteRaw } from '@miljan9602/v2-sdk';
+import { ChainId, Currency, TradeType } from '@miljan9602/sdk-core';
 import {
   UNIVERSAL_ROUTER_ADDRESS,
   SwapRouter as UniversalRouter,
-} from '@uniswap/universal-router-sdk';
-import { Route as V2RouteRaw } from '@uniswap/v2-sdk';
-import { Route as V3RouteRaw } from '@uniswap/v3-sdk';
+} from '@miljan9602/universal-router-sdk';
+import { Route as V3RouteRaw } from '@miljan9602/v3-sdk';
 import _ from 'lodash';
 
 import {

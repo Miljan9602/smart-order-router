@@ -3,8 +3,8 @@ import {
   Currency,
   Ether,
   NativeCurrency,
-  Token,
-} from '@uniswap/sdk-core';
+  Token
+} from '@miljan9602/sdk-core';
 
 // WIP: Gnosis, Moonbeam
 export const SUPPORTED_CHAINS: ChainId[] = [
@@ -269,6 +269,10 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
       return process.env.JSON_RPC_PROVIDER_AVALANCHE!;
     case ChainId.BASE:
       return process.env.JSON_RPC_PROVIDER_BASE!;
+    case ChainId.OPTIMISM_SEPOLIA:
+      return process.env.JSON_RPC_PROVIDER_OPTIMISM_SEPOLIA!;
+    case ChainId.ARBITRUM_SEPOLIA:
+      return process.env.JSON_RPC_PROVIDER_ARBITRUM_SEPOLIA!;
     default:
       throw new Error(`Chain id: ${id} not supported`);
   }
@@ -310,6 +314,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
     'WETH',
     'Wrapped Ether'
   ),
+  [ChainId.OPTIMISM_SEPOLIA]: new Token(
+    1,
+    'add',
+    18,
+    'add',
+    'add'
+  ),
   [ChainId.OPTIMISM_GOERLI]: new Token(
     ChainId.OPTIMISM_GOERLI,
     '0x4200000000000000000000000000000000000006',
@@ -330,6 +341,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
     18,
     'WETH',
     'Wrapped Ether'
+  ),
+  [ChainId.ARBITRUM_SEPOLIA]: new Token(
+    ChainId.ARBITRUM_SEPOLIA,
+    'TEST',
+    18,
+    'test',
+    'test'
   ),
   [ChainId.POLYGON]: new Token(
     ChainId.POLYGON,

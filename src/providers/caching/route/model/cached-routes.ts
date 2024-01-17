@@ -1,5 +1,5 @@
-import { Protocol } from '@uniswap/router-sdk';
-import { ChainId, Token, TradeType } from '@uniswap/sdk-core';
+import { Protocol } from '@miljan9602/router-sdk';
+import { ChainId, Token, TradeType } from '@miljan9602/sdk-core';
 import _ from 'lodash';
 
 import {

@@ -3,9 +3,9 @@ import {
   ChainId,
   CurrencyAmount as CurrencyAmountRaw,
   Token,
-} from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
-import { Pool } from '@uniswap/v3-sdk';
+} from '@miljan9602/sdk-core';
+import { Pair } from '@miljan9602/v2-sdk';
+import { Pool } from '@miljan9602/v3-sdk';
 
 import { ProviderConfig } from '../../../providers/provider';
 import {
