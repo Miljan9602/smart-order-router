@@ -2,7 +2,7 @@ import { BigNumber } from '@ethersproject/bignumber';
 import { TradeType } from '@miljan9602/sdk-core';
 import {
   InsufficientInputAmountError,
-  InsufficientReservesError,
+  InsufficientReservesError
 } from '@miljan9602/v2-sdk';
 
 import { V2Route } from '../../routers/router';
